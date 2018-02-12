@@ -2,14 +2,16 @@
 # Copyright 2016 Eficent Business and IT Consulting Services S.L.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0).
 
-from odoo import api, fields, models
+from odoo import api, fields, models, _
+from odoo.exceptions import UserError
 import odoo.addons.decimal_precision as dp
 
 _STATES = [
     ('draft', 'Draft'),
     ('to_approve', 'To be approved'),
     ('approved', 'Approved'),
-    ('rejected', 'Rejected')
+    ('rejected', 'Rejected'),
+    ('done', 'Done')
 ]
 
 
@@ -30,7 +32,7 @@ class PurchaseRequest(models.Model):
 
     @api.model
     def _get_default_name(self):
-        return self.env['ir.sequence'].get('purchase.request')
+        return self.env['ir.sequence'].next_by_code('purchase.request')
 
     @api.model
     def _default_picking_type(self):
@@ -48,7 +50,7 @@ class PurchaseRequest(models.Model):
     @api.depends('state')
     def _compute_is_editable(self):
         for rec in self:
-            if rec.state in ('to_approve', 'approved', 'rejected'):
+            if rec.state in ('to_approve', 'approved', 'rejected', 'done'):
                 rec.is_editable = False
             else:
                 rec.is_editable = True
@@ -62,6 +64,8 @@ class PurchaseRequest(models.Model):
                 return 'purchase_request.mt_request_approved'
             elif 'state' in init_values and rec.state == 'rejected':
                 return 'purchase_request.mt_request_rejected'
+            elif 'state' in init_values and rec.state == 'done':
+                return 'purchase_request.mt_request_done'
         return super(PurchaseRequest, self)._track_subtype(init_values)
 
     name = fields.Char('Request Reference', size=32, required=True,
@@ -100,10 +104,27 @@ class PurchaseRequest(models.Model):
     is_editable = fields.Boolean(string="Is editable",
                                  compute="_compute_is_editable",
                                  readonly=True)
-
+    to_approve_allowed = fields.Boolean(
+        compute='_compute_to_approve_allowed')
     picking_type_id = fields.Many2one('stock.picking.type',
                                       'Picking Type', required=True,
                                       default=_default_picking_type)
+
+    @api.multi
+    @api.depends(
+        'state',
+        'line_ids.product_qty',
+        'line_ids.cancelled',
+    )
+    def _compute_to_approve_allowed(self):
+        for rec in self:
+            rec.to_approve_allowed = (
+                rec.state == 'draft' and
+                any([
+                    not line.cancelled and line.product_qty
+                    for line in rec.line_ids
+                ])
+            )
 
     @api.multi
     def copy(self, default=None):
@@ -111,7 +132,7 @@ class PurchaseRequest(models.Model):
         self.ensure_one()
         default.update({
             'state': 'draft',
-            'name': self.env['ir.sequence'].get('purchase.request'),
+            'name': self.env['ir.sequence'].next_by_code('purchase.request'),
         })
         return super(PurchaseRequest, self).copy(default)
 
@@ -132,27 +153,42 @@ class PurchaseRequest(models.Model):
 
     @api.multi
     def button_draft(self):
-        for rec in self:
-            rec.state = 'draft'
-        return True
+        self.mapped('line_ids').do_uncancel()
+        return self.write({'state': 'draft'})
 
     @api.multi
     def button_to_approve(self):
-        for rec in self:
-            rec.state = 'to_approve'
-        return True
+        self.to_approve_allowed_check()
+        return self.write({'state': 'to_approve'})
 
     @api.multi
     def button_approved(self):
-        for rec in self:
-            rec.state = 'approved'
-        return True
+        return self.write({'state': 'approved'})
 
     @api.multi
     def button_rejected(self):
+        self.mapped('line_ids').do_cancel()
+        return self.write({'state': 'rejected'})
+
+    @api.multi
+    def button_done(self):
+        return self.write({'state': 'done'})
+
+    @api.multi
+    def check_auto_reject(self):
+        """When all lines are cancelled the purchase request should be
+        auto-rejected."""
+        for pr in self:
+            if not pr.line_ids.filtered(lambda l: l.cancelled is False):
+                pr.write({'state': 'rejected'})
+
+    @api.multi
+    def to_approve_allowed_check(self):
         for rec in self:
-            rec.state = 'rejected'
-        return True
+            if not rec.to_approve_allowed:
+                raise UserError(
+                    _("You can't request an approval for a purchase request "
+                      "which is empty. (%s)") % rec.name)
 
 
 class PurchaseRequestLine(models.Model):
@@ -166,7 +202,8 @@ class PurchaseRequestLine(models.Model):
                  'analytic_account_id', 'date_required', 'specifications')
     def _compute_is_editable(self):
         for rec in self:
-            if rec.request_id.state in ('to_approve', 'approved', 'rejected'):
+            if rec.request_id.state in ('to_approve', 'approved', 'rejected',
+                                        'done'):
                 rec.is_editable = False
             else:
                 rec.is_editable = True
@@ -231,12 +268,13 @@ class PurchaseRequestLine(models.Model):
     supplier_id = fields.Many2one('res.partner',
                                   string='Preferred supplier',
                                   compute="_compute_supplier_id")
-
     procurement_id = fields.Many2one('procurement.order',
                                      'Procurement Order',
-                                     readonly=True)
+                                     readonly=True, copy=False)
+    cancelled = fields.Boolean(
+        string="Cancelled", readonly=True, default=False, copy=False)
 
-    @api.onchange('product_id', 'product_uom_id')
+    @api.onchange('product_id')
     def onchange_product_id(self):
         if self.product_id:
             name = self.product_id.name
@@ -247,3 +285,21 @@ class PurchaseRequestLine(models.Model):
             self.product_uom_id = self.product_id.uom_id.id
             self.product_qty = 1
             self.name = name
+
+    @api.multi
+    def do_cancel(self):
+        """Actions to perform when cancelling a purchase request line."""
+        self.write({'cancelled': True})
+
+    @api.multi
+    def do_uncancel(self):
+        """Actions to perform when uncancelling a purchase request line."""
+        self.write({'cancelled': False})
+
+    @api.multi
+    def write(self, vals):
+        res = super(PurchaseRequestLine, self).write(vals)
+        if vals.get('cancelled'):
+            requests = self.mapped('request_id')
+            requests.check_auto_reject()
+        return res

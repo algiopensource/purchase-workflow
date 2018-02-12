@@ -2,7 +2,7 @@
 <!-- Copyright 2016 Eficent Business and IT Consulting Services S.L.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0) -->
 <odoo>
-    <data>
+
         <record model="ir.ui.view" id="view_purchase_request_form">
             <field name="name">purchase.request.form</field>
             <field name="model">purchase.request</field>
@@ -10,7 +10,7 @@
                 <form string="Purchase Request" version="7.0">
                 <header>
                     <button name="button_draft"
-                            states="to_approve,approved,rejected"
+                            states="to_approve,approved,rejected,done"
                             string="Reset"
                             type="object"
                             groups="purchase_request.group_purchase_request_manager"/>
@@ -23,13 +23,19 @@
                             type="object"
                             class="oe_highlight"
                             groups="purchase_request.group_purchase_request_manager"/>
+                    <button name="button_done"
+                            states="approved"
+                            string="Done"
+                            type="object"
+                            class="oe_highlight"
+                            groups="purchase_request.group_purchase_request_manager"/>
                     <button name="button_rejected"
                             states="to_approve,approved"
                             string="Reject"
                             type="object"
                             groups="purchase_request.group_purchase_request_manager"/>
                     <field name="state" widget="statusbar"
-                           statusbar_visible="draft,to_approve,approved,rejected"
+                           statusbar_visible="draft,to_approve,approved,done,rejected"
                            statusbar_colors='{"approved":"blue"}'/>
                 </header>
                 <sheet>
@@ -68,7 +74,7 @@
                     <notebook>
                         <page string="Products">
                             <field name="line_ids">
-                                <tree>
+                                <tree decoration-muted="cancelled == True">
                                     <field name="product_id"/>
                                     <field name="name"/>
                                     <field name="product_qty"/>
@@ -76,6 +82,7 @@
                                     <field name="analytic_account_id"
                                            groups="analytic.group_analytic_accounting"/>
                                     <field name="date_required"/>
+                                    <field name="cancelled" invisible="1"/>
                                     <field name="is_editable" invisible="1"/>
                                 </tree>
                                 <form>
@@ -100,10 +107,10 @@
                                                 </div>
                                                 <field name="analytic_account_id"
                                                        groups="analytic.group_analytic_accounting"
-                                                       domain="[('account_type','=','normal')]"
                                                        attrs="{'readonly': [('is_editable','=', False)]}"/>
                                                 <field name="date_required"
                                                        attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                                <field name="cancelled"/>
                                                 <field name="procurement_id"/>
                                             </group>
                                         </group>
@@ -172,6 +179,9 @@
                     <filter name="state_rejected" string="Rejected"
                             domain="[('state','=','rejected')]"
                             help="Request is rejected"/>
+                    <filter name="state_done" string="Done"
+                            domain="[('state','=','done')]"
+                            help="Request is done"/>
                     <filter string="Unread Messages"
                             name="message_needaction"
                             domain="[('message_needaction','=',True)]"/>
@@ -226,7 +236,8 @@
             <field name="name">purchase.request.line.tree</field>
             <field name="model">purchase.request.line</field>
             <field name="arch" type="xml">
-                <tree string="Purchase Request Lines" create="false">
+                <tree string="Purchase Request Lines" create="false"
+                      decoration-muted="cancelled == True">
                     <field name="request_id"/>
                     <field name="request_state"/>
                     <field name="requested_by"/>
@@ -239,6 +250,7 @@
                     <field name="analytic_account_id"
                            groups="analytic.group_analytic_accounting"/>
                     <field name="supplier_id"/>
+                    <field name="cancelled" invisible="1"/>
                 </tree>
             </field>
         </record>
@@ -247,7 +259,7 @@
             <field name="model">purchase.request.line</field>
             <field name="priority" eval="20"/>
             <field name="arch" type="xml">
-                <form string="Purchase Request Line" version="7.0">
+                <form string="Purchase Request Line" duplicate="false">
                     <sheet>
                         <h1>
                             <field name="request_id"/>
@@ -292,6 +304,7 @@
                                        attrs="{'readonly': [('is_editable','=', False)]}"/>
                                 <field name="date_required"
                                        attrs="{'readonly': [('is_editable','=', False)]}"/>
+                                <field name="cancelled"/>
                                 <field name="procurement_id"/>
                             </group>
                         </group>
@@ -326,6 +339,7 @@
                     <field name="date_required"/>
                     <field name="analytic_account_id"/>
                     <field name="procurement_id"/>
+                    <field name="cancelled" invisible="1"/>
                     <filter name="request_state_draft" string="Draft"
                             domain="[('request_state','=','draft')]"
                             help="Request is to be approved"/>
@@ -342,6 +356,9 @@
                             help="Assigned to me"/>
                     <filter domain="[('requested_by','=', uid)]"
                             help="My requests"/>
+                    <filter name="uncancelled"
+                            domain="[('cancelled','=', False)]"
+                            string="Uncancelled"/>
                     <group expand="0" string="Group By...">
                         <filter string="Product"
                                 domain="[]" context="{'group_by' : 'product_id'}" />
@@ -427,5 +444,4 @@
             action="purchase_request_line_form_action"
             />
 
-    </data>
 </odoo>

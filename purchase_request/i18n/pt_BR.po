@@ -6,6 +6,8 @@
 # Armando Vulcano Junior <vulcano@uol.com.br>, 2016
 # Claudio Araujo Santos <claudioaraujosantos@gmail.com>, 2016
 # danimaribeiro <danimaribeiro@gmail.com>, 2016
+# falexandresilva <falexandresilva@gmail.com>, 2017
+# falexandresilva <falexandresilva@gmail.com>, 2017
 # Felipe Lopes <ti@trojahntoppel.com.br>, 2016
 # OCA Transbot <transbot@odoo-community.org>, 2016
 # Paulo Ricardo <ti@shoppingescritorio.com.br>, 2016
@@ -13,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: purchase-workflow (10.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-17 03:38+0000\n"
-"PO-Revision-Date: 2016-10-22 22:24+0000\n"
+"POT-Creation-Date: 2017-11-24 07:53+0000\n"
+"PO-Revision-Date: 2017-11-24 07:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-purchase-workflow-10-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +38,12 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
 msgid "<strong>Creation Date:</strong><br/>"
-msgstr ""
+msgstr "Data de criação"
 
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
 msgid "<strong>Description:</strong><br/>"
-msgstr ""
+msgstr "Descrição"
 
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
@@ -71,12 +73,12 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
 msgid "<strong>Requested Date</strong>"
-msgstr ""
+msgstr "Data de requisição"
 
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
 msgid "<strong>Requested by:</strong><br/>"
-msgstr ""
+msgstr "Requisitado por:"
 
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
@@ -86,7 +88,7 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.report_purchaserequests
 msgid "<strong>Specifications</strong>"
-msgstr ""
+msgstr "Especificações"
 
 #. module: purchase_request
 #: model:ir.actions.act_window,help:purchase_request.purchase_request_form_action
@@ -130,6 +132,11 @@ msgstr "Atribuído à"
 #: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 #: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Assigned to me"
+msgstr ""
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_cancelled
+msgid "Cancelled"
 msgstr ""
 
 #. module: purchase_request
@@ -178,6 +185,13 @@ msgstr "Descrição"
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_display_name
 msgid "Display Name"
 msgstr "Nome para Mostrar"
+
+#. module: purchase_request
+#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
+msgid "Done"
+msgstr ""
 
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
@@ -297,11 +311,6 @@ msgid "Purchase Request Manager"
 msgstr "Responsável pela aprovação da compra"
 
 #. module: purchase_request
-#: model:mail.message.subtype,description:purchase_request.mt_request_rejected
-msgid "Purchase Request Rejected"
-msgstr "Requisição de compra rejeitado"
-
-#. module: purchase_request
 #: model:res.groups,name:purchase_request.group_purchase_request_user
 msgid "Purchase Request User"
 msgstr "Usuário solicitante"
@@ -313,6 +322,17 @@ msgid "Purchase Request approved"
 msgstr "Requisição de compra aprovada"
 
 #. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_request_done
+msgid "Purchase Request done"
+msgstr ""
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_done
+msgid "Purchase Request is done"
+msgstr ""
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_request_rejected
 #: model:mail.message.subtype,name:purchase_request.mt_request_rejected
 msgid "Purchase Request rejected"
 msgstr "Requisição de compra rejeitada"
@@ -375,6 +395,11 @@ msgstr "Aprovação da requisição"
 #: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Request is approved"
 msgstr "Requisição está aprovada"
+
+#. module: purchase_request
+#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+msgid "Request is done"
+msgstr ""
 
 #. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
@@ -452,6 +477,11 @@ msgid "To Approve"
 msgstr "Para aprovação"
 
 #. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_to_approve_allowed
+msgid "To approve allowed"
+msgstr ""
+
+#. module: purchase_request
 #: selection:purchase.request,state:0
 msgid "To be approved"
 msgstr "Para ser aprovado"
@@ -467,6 +497,18 @@ msgid "Unassigned Request"
 msgstr "Requisição não atribuída"
 
 #. module: purchase_request
+#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+msgid "Uncancelled"
+msgstr ""
+
+#. module: purchase_request
 #: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Unread Messages"
 msgstr "Mensagens não lidas"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:190
+#, python-format
+msgid ""
+"You can't request an approval for a purchase request which is empty. (%s)"
+msgstr ""
