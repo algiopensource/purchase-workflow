@@ -3,11 +3,12 @@
 # * purchase_fiscal_position_update
 # 
 # Translators:
+# Hotellook, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: purchase-workflow (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 10:15+0000\n"
+"POT-Creation-Date: 2017-02-23 16:23+0000\n"
 "PO-Revision-Date: 2016-03-08 10:16+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-purchase-workflow-8-0/language/de/)\n"
@@ -43,4 +44,4 @@ msgstr ""
 #: code:addons/purchase_fiscal_position_update/purchase.py:49
 #, python-format
 msgid "Warning"
-msgstr ""
+msgstr "Hinweis"

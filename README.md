@@ -13,6 +13,7 @@ This project aim to deal with modules related to manage purchase and their relat
  - ...
 
 [//]: # (addons)
+
 Available addons
 ----------------
 addon | version | summary
@@ -37,7 +38,7 @@ addon | version | summary
 [purchase_partial_invoicing](purchase_partial_invoicing/) | 8.0.0.1.2 | Purchase partial invoicing
 [purchase_partner_invoice_method](purchase_partner_invoice_method/) | 8.0.1.0.0 | Adds supplier invoicing control on partner form
 [purchase_picking_state](purchase_picking_state/) | 8.0.1.0.0 | Add the status of all the incoming picking in the purchase order
-[purchase_request](purchase_request/) | 8.0.1.0.0 | Purchase Request
+[purchase_request](purchase_request/) | 8.0.1.1.0 | Purchase Request
 [purchase_request_procurement](purchase_request_procurement/) | 8.0.1.0.0 | Purchase Request Procurement
 [purchase_request_to_requisition](purchase_request_to_requisition/) | 8.0.1.0.0 | Purchase Request to Call for Bids
 [purchase_request_to_rfq](purchase_request_to_rfq/) | 8.0.1.0.0 | Purchase Request to RFQ
@@ -50,8 +51,10 @@ addon | version | summary
 [purchase_requisition_type](purchase_requisition_type/) | 8.0.1.0.0 | Add order type to purchase requisition
 [purchase_rfq_bid_workflow](purchase_rfq_bid_workflow/) | 8.0.0.3.0 | Improve the purchase workflow to manage RFQ, Bids, and Orders
 [purchase_rfq_number](purchase_rfq_number/) | 8.0.1.0.0 | Adds a sequence on purchase RFQ
+[purchase_supplier_rounding_method](purchase_supplier_rounding_method/) | 8.0.1.0.0 | Supplier Rounding Method
 [purchase_transport_document](purchase_transport_document/) | 8.0.0.1.0 | Add a new Transport Document object in the Purchase Order
 [vendor_consignment_stock](vendor_consignment_stock/) | 8.0.0.2.0 | Manage stock in our warehouse that is owned by a vendor
+
 
 Unported addons
 ---------------

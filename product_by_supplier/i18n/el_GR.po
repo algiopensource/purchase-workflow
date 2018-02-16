@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: purchase-workflow (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-16 12:06+0000\n"
+"POT-Creation-Date: 2017-03-04 05:41+0000\n"
 "PO-Revision-Date: 2016-03-08 10:16+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-purchase-workflow-8-0/language/el_GR/)\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: view:product.supplierinfo:product_by_supplier.view_product_supplierinfo_search
 #: view:product.supplierinfo:product_by_supplier.view_product_supplierinfo_tree1
 msgid "Product"
-msgstr ""
+msgstr "Προϊόν"
 
 #. module: product_by_supplier
 #: view:product.supplierinfo:product_by_supplier.view_product_supplierinfo_search

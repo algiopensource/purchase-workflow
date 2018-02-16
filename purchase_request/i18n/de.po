@@ -4,14 +4,13 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
-# Rudolf Schnapka <rs@techno-flex.de>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 05:26+0000\n"
-"PO-Revision-Date: 2017-02-04 05:26+0000\n"
-"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>, 2017\n"
+"POT-Creation-Date: 2017-11-18 07:27+0000\n"
+"PO-Revision-Date: 2017-11-18 07:27+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +41,7 @@ msgstr "Kostenstelle"
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_form
 msgid "Approve"
-msgstr ""
+msgstr "Genehmigen"
 
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
@@ -61,7 +60,7 @@ msgstr ""
 #: view:purchase.request.line:purchase_request.purchase_request_line_search
 #: field:purchase.request.line,assigned_to:0
 msgid "Assigned to"
-msgstr ""
+msgstr "Zugewiesen an"
 
 #. module: purchase_request
 #: view:website:purchase_request.report_purchaserequests
@@ -94,7 +93,7 @@ msgstr ""
 #. module: purchase_request
 #: field:purchase.request,date_start:0
 msgid "Creation date"
-msgstr ""
+msgstr "Anlagedatum"
 
 #. module: purchase_request
 #: help:purchase.request,message_last_post:0
@@ -137,7 +136,7 @@ msgstr "Entwurf"
 #: field:purchase.request,message_follower_ids:0
 #: field:purchase.request.line,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Follower"
 
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
@@ -152,6 +151,9 @@ msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
 msgstr ""
+"Beinhaltet die Dialogzusammenfassung (Anzahl Mitteilungen, ...). Diese "
+"Zusammenfassung liegt in HTML vor, um direkt in Kanban-Ansichten verwendet "
+"werden zu können."
 
 #. module: purchase_request
 #: field:purchase.request,id:0 field:purchase.request.line,id:0
@@ -162,13 +164,13 @@ msgstr "ID"
 #: help:purchase.request,message_unread:0
 #: help:purchase.request.line,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "Wenn angehakt, erfordern neue Mitteilungen Ihre Aufmerksamkeit."
 
 #. module: purchase_request
 #: field:purchase.request,message_is_follower:0
 #: field:purchase.request.line,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "Ist Follower"
 
 #. module: purchase_request
 #: field:purchase.request,is_editable:0
@@ -209,12 +211,12 @@ msgstr "Nachrichten"
 #: help:purchase.request,message_ids:0
 #: help:purchase.request.line,message_ids:0
 msgid "Messages and communication history"
-msgstr ""
+msgstr "Meldungs- und Kommunikationsverlauf"
 
 #. module: purchase_request
 #: field:purchase.request,picking_type_id:0
 msgid "Picking Type"
-msgstr ""
+msgstr "Kommissionierungsart"
 
 #. module: purchase_request
 #: view:website:purchase_request.report_purchaserequests
@@ -343,20 +345,20 @@ msgstr "Menge"
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_form
 msgid "Reject"
-msgstr ""
+msgstr "Ablehnen"
 
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
 #: selection:purchase.request,state:0
 #: view:purchase.request.line:purchase_request.purchase_request_line_search
 msgid "Rejected"
-msgstr ""
+msgstr "Abgelehnt"
 
 #. module: purchase_request
 #: field:purchase.request.line,date_required:0
 #: field:purchase.request.line,date_start:0
 msgid "Request Date"
-msgstr ""
+msgstr "Anforderungsdatum"
 
 #. module: purchase_request
 #: field:purchase.request,name:0
@@ -433,7 +435,7 @@ msgstr ""
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
 msgid "Source"
-msgstr ""
+msgstr "Herkunft"
 
 #. module: purchase_request
 #: field:purchase.request,origin:0 field:purchase.request.line,origin:0
@@ -467,7 +469,7 @@ msgstr "Status"
 #: field:purchase.request,message_summary:0
 #: field:purchase.request.line,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Zusammenfassung"
 
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
@@ -483,7 +485,7 @@ msgstr ""
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
 msgid "Unassigned"
-msgstr ""
+msgstr "Nicht zugewiesen"
 
 #. module: purchase_request
 #: view:purchase.request:purchase_request.view_purchase_request_search
