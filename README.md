@@ -20,12 +20,13 @@ addon | version | summary
 --- | --- | ---
 [procurement_purchase_no_grouping](procurement_purchase_no_grouping/) | 10.0.1.0.0 | Procurement Purchase No Grouping
 [product_by_supplier](product_by_supplier/) | 10.0.1.0.0 | Show products grouped by suppliers
+[product_supplier_code_purchase](product_supplier_code_purchase/) | 10.0.1.0.0 | This module adds to the purchase order line the supplier code defined in the product.
 [product_supplierinfo_discount](product_supplierinfo_discount/) | 10.0.1.0.0 | Discounts in product supplier info
 [purchase_allowed_product](purchase_allowed_product/) | 10.0.1.0.0 | This module allows to select only products that can be supplied by the supplier
 [purchase_cancel_reason](purchase_cancel_reason/) | 10.0.1.0.0 | Purchase Cancel Reason
-[purchase_commercial_partner](purchase_commercial_partner/) | 10.0.1.0.0 | Add stored related field 'Commercial Supplier' on POs
+[purchase_commercial_partner](purchase_commercial_partner/) | 10.0.1.0.1 | Add stored related field 'Commercial Supplier' on POs
 [purchase_delivery_split_date](purchase_delivery_split_date/) | 10.0.1.0.0 | Allows Purchase Order you confirm to generate one Incoming Shipment for each expected date indicated in the Purchase Order Lines
-[purchase_discount](purchase_discount/) | 10.0.1.0.3 | Purchase order lines with discounts
+[purchase_discount](purchase_discount/) | 10.0.1.0.4 | Purchase order lines with discounts
 [purchase_fiscal_position_update](purchase_fiscal_position_update/) | 10.0.1.0.0 | Changing the fiscal position of a purchase order will auto-update purchase order lines
 [purchase_fop_shipping](purchase_fop_shipping/) | 10.0.1.0.0 | Purchase Free-Of-Paiment shipping
 [purchase_line_product_image](purchase_line_product_image/) | 10.0.1.0.0 | Show Product Image at Purchase Order Line.
@@ -38,10 +39,11 @@ addon | version | summary
 [purchase_order_line_description](purchase_order_line_description/) | 10.0.1.0.0 | Purchase order line description
 [purchase_order_revision](purchase_order_revision/) | 10.0.1.0.0 | Purchase order revisions
 [purchase_picking_state](purchase_picking_state/) | 10.0.1.0.0 | Add the status of all the incoming picking in the purchase order
-[purchase_request](purchase_request/) | 10.0.1.0.2 | Use this module to have notification of requirements of materials and/or external services and keep track of such requirements.
+[purchase_request](purchase_request/) | 10.0.1.1.0 | Use this module to have notification of requirements of materials and/or external services and keep track of such requirements.
 [purchase_request_procurement](purchase_request_procurement/) | 10.0.1.0.1 | Purchase Request Procurement
 [purchase_request_to_procurement](purchase_request_to_procurement/) | 10.0.1.0.0 | This module introduces the possiblity to create procurement order from purchase request
 [purchase_request_to_rfq](purchase_request_to_rfq/) | 10.0.1.0.0 | Purchase Request to RFQ
+[purchase_request_to_rfq_order_approved](purchase_request_to_rfq_order_approved/) | 10.0.1.0.0 | Purchase Request to RFQ Order Approved
 [purchase_triple_discount](purchase_triple_discount/) | 10.0.1.1.0 | Manage triple discount on purchase order lines
 [subcontracted_service](subcontracted_service/) | 10.0.1.0.0 | Subcontracted service
 
