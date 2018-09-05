@@ -1,22 +1,25 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * purchase_request_to_rfq
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Victor Safronovich <vsafronovich@suvit.ru>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 04:26+0000\n"
-"PO-Revision-Date: 2016-12-24 04:26+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2017-05-01 21:46+0000\n"
+"PO-Revision-Date: 2017-05-01 21:46+0000\n"
+"Last-Translator: Victor Safronovich <vsafronovich@suvit.ru>, 2017\n"
 "Language-Team: Russian (https://www.transifex.com/oca/teams/23907/ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: purchase_request_to_rfq
 #: code:addons/purchase_request_to_rfq/models/purchase_order.py:24
@@ -53,7 +56,7 @@ msgstr "Отменена"
 #. module: purchase_request_to_rfq
 #: selection:purchase.request.line,purchase_state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "Отменен"
 
 #. module: purchase_request_to_rfq
 #: selection:purchase.request.line,purchase_state:0
@@ -86,7 +89,7 @@ msgstr "Описание"
 #. module: purchase_request_to_rfq
 #: view:purchase.request.line.make.purchase.order:purchase_request_to_rfq.view_purchase_request_line_make_purchase_order
 msgid "Details"
-msgstr ""
+msgstr "Данные"
 
 #. module: purchase_request_to_rfq
 #: field:purchase.request.line.make.purchase.order,display_name:0
@@ -97,7 +100,7 @@ msgstr ""
 #. module: purchase_request_to_rfq
 #: selection:purchase.request.line,purchase_state:0
 msgid "Done"
-msgstr ""
+msgstr "Завершен"
 
 #. module: purchase_request_to_rfq
 #: code:addons/purchase_request_to_rfq/wizard/purchase_request_line_make_purchase_order.py:165
@@ -179,7 +182,7 @@ msgstr ""
 #. module: purchase_request_to_rfq
 #: field:purchase.request.line.make.purchase.order.item,product_id:0
 msgid "Product"
-msgstr ""
+msgstr "Товар/Услуга"
 
 #. module: purchase_request_to_rfq
 #: view:purchase.request.line:purchase_request_to_rfq.purchase_request_line_search

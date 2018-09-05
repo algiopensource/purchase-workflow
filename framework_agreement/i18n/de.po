@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * framework_agreement
-# 
+#
 # Translators:
 # Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2015
 # Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2015
@@ -17,14 +17,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: purchase-workflow (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-14 05:51+0000\n"
-"PO-Revision-Date: 2017-01-19 21:07+0000\n"
+"POT-Creation-Date: 2017-04-21 14:33+0000\n"
+"PO-Revision-Date: 2017-04-19 11:44+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: German (http://www.transifex.com/oca/OCA-purchase-workflow-8-0/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-purchase-"
+"workflow-8-0/language/de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: framework_agreement
@@ -210,8 +211,8 @@ msgstr "ID"
 #. module: framework_agreement
 #: help:res.company,one_agreement_per_product:0
 msgid ""
-"If checked you can have only one framework agreement per product at the same"
-" time."
+"If checked you can have only one framework agreement per product at the same "
+"time."
 msgstr ""
 
 #. module: framework_agreement
@@ -333,12 +334,12 @@ msgstr ""
 #. module: framework_agreement
 #: field:framework.agreement,origin:0
 msgid "Origin"
-msgstr ""
+msgstr "Ursprung"
 
 #. module: framework_agreement
 #: field:framework.agreement,payment_term_id:0
 msgid "Payment Term"
-msgstr ""
+msgstr "Zahlungsbedingung"
 
 #. module: framework_agreement
 #: field:framework.agreement,portfolio_id:0
@@ -378,7 +379,7 @@ msgstr ""
 #. module: framework_agreement
 #: model:ir.model,name:framework_agreement.model_product_pricelist
 msgid "Pricelist"
-msgstr ""
+msgstr "Preisliste"
 
 #. module: framework_agreement
 #: view:framework.agreement:framework_agreement.framework_agreement_search_view
@@ -411,7 +412,7 @@ msgstr "Menge"
 #: view:framework.agreement:framework_agreement.framework_agreement_search_view
 #: selection:framework.agreement,state:0
 msgid "Running"
-msgstr ""
+msgstr "Laufend"
 
 #. module: framework_agreement
 #: field:framework.agreement,shipment_origin_id:0
@@ -434,7 +435,7 @@ msgstr "Status"
 #: view:framework.agreement.portfolio:framework_agreement.portfolio_search_view
 #: field:framework.agreement.portfolio,supplier_id:0
 msgid "Supplier"
-msgstr ""
+msgstr "Lieferant"
 
 #. module: framework_agreement
 #: sql_constraint:framework.agreement.portfolio:0

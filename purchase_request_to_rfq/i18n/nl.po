@@ -1,21 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * purchase_request_to_rfq
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-16 12:06+0000\n"
-"PO-Revision-Date: 2016-11-16 12:06+0000\n"
+"POT-Creation-Date: 2017-05-13 05:48+0000\n"
+"PO-Revision-Date: 2017-05-13 05:48+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
 "Language-Team: Dutch (https://www.transifex.com/oca/teams/23907/nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: purchase_request_to_rfq
@@ -86,7 +86,7 @@ msgstr ""
 #. module: purchase_request_to_rfq
 #: view:purchase.request.line.make.purchase.order:purchase_request_to_rfq.view_purchase_request_line_make_purchase_order
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 #. module: purchase_request_to_rfq
 #: field:purchase.request.line.make.purchase.order,display_name:0
@@ -179,7 +179,7 @@ msgstr ""
 #. module: purchase_request_to_rfq
 #: field:purchase.request.line.make.purchase.order.item,product_id:0
 msgid "Product"
-msgstr ""
+msgstr "Product"
 
 #. module: purchase_request_to_rfq
 #: view:purchase.request.line:purchase_request_to_rfq.purchase_request_line_search
@@ -195,7 +195,7 @@ msgstr ""
 #: model:ir.model,name:purchase_request_to_rfq.model_purchase_order
 #: field:purchase.request.line.make.purchase.order,purchase_order_id:0
 msgid "Purchase Order"
-msgstr ""
+msgstr "Inkooporder"
 
 #. module: purchase_request_to_rfq
 #: model:ir.model,name:purchase_request_to_rfq.model_purchase_order_line

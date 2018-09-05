@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-03 08:13+0000\n"
-"PO-Revision-Date: 2014-10-03 08:13+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,20 +15,33 @@ msgstr ""
 
 #. module: framework_agreement
 #: field:framework.agreement.pricelist,framework_agreement_id:0
-#: field:purchase.order,framework_agreement_id:0
 #: field:purchase.order.line,framework_agreement_id:0
 msgid "Agreement"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:197
-#, python-format
-msgid "Agreement Warning! If you change the agreement of this order (and eventually the currency), existing order lines will not be updated."
+#: view:framework.agreement.portfolio:framework_agreement.portfolio_form_view
+#: model:ir.model,name:framework_agreement.model_framework_agreement_portfolio
+msgid "Agreement Portfolio"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement.portfolio:framework_agreement.portfolio_search_view
+#: view:framework.agreement.portfolio:framework_agreement.portfolio_tree_view
+#: model:ir.actions.act_window,name:framework_agreement.portfolio_action
+#: model:ir.ui.menu,name:framework_agreement.portfolio_menu
+msgid "Agreement Portfolios"
 msgstr ""
 
 #. module: framework_agreement
 #: model:ir.model,name:framework_agreement.model_framework_agreement
 msgid "Agreement on price"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement.portfolio:framework_agreement.portfolio_form_view
+#: field:framework.agreement.portfolio,agreement_ids:0
+msgid "Agreements"
 msgstr ""
 
 #. module: framework_agreement
@@ -44,18 +55,39 @@ msgid "Begin of Agreement"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
+#: view:framework.agreement:framework_agreement.framework_agreement_form_view
+#: field:framework.agreement,clauses:0
+msgid "Clauses"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
+#: selection:framework.agreement,state:0
+msgid "Closed"
+msgstr ""
+
+#. module: framework_agreement
 #: model:ir.model,name:framework_agreement.model_res_company
 msgid "Companies"
 msgstr ""
 
 #. module: framework_agreement
 #: field:framework.agreement,company_id:0
+#: field:framework.agreement.portfolio,company_id:0
 msgid "Company"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
+#: selection:framework.agreement,state:0
+msgid "Consumed"
 msgstr ""
 
 #. module: framework_agreement
 #: field:framework.agreement,create_uid:0
 #: field:framework.agreement.line,create_uid:0
+#: field:framework.agreement.portfolio,create_uid:0
 #: field:framework.agreement.pricelist,create_uid:0
 msgid "Created by"
 msgstr ""
@@ -63,6 +95,7 @@ msgstr ""
 #. module: framework_agreement
 #: field:framework.agreement,create_date:0
 #: field:framework.agreement.line,create_date:0
+#: field:framework.agreement.portfolio,create_date:0
 #: field:framework.agreement.pricelist,create_date:0
 msgid "Created on"
 msgstr ""
@@ -73,16 +106,37 @@ msgid "Currency"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/framework_agreement.py:309
+#: code:addons/framework_agreement/model/framework_agreement.py:300
 #, python-format
-msgid "Data are missingPlease enter dates and price informations"
+msgid "Data are missing. Please enter dates and prices"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Dates"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
+#: view:framework.agreement:framework_agreement.framework_agreement_form_view
+#: field:framework.agreement,delivery_remark:0
+msgid "Delivery Remarks"
+msgstr ""
+
+#. module: framework_agreement
+#: field:framework.agreement,display_name:0
+#: field:framework.agreement.line,display_name:0
+#: field:framework.agreement.portfolio,display_name:0
+#: field:framework.agreement.pricelist,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
+#: selection:framework.agreement,state:0
+msgid "Draft"
 msgstr ""
 
 #. module: framework_agreement
@@ -91,21 +145,22 @@ msgid "End of Agreement"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: model:ir.actions.act_window,name:framework_agreement.action_framework_agreement
 #: model:ir.ui.menu,name:framework_agreement.action_framework_agreement_menu
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Framework Agreement"
 msgstr ""
 
 #. module: framework_agreement
 #: view:framework.agreement:framework_agreement.framework_agreement_list_view
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
 msgid "Framework Agreement (LTA)"
 msgstr ""
 
 #. module: framework_agreement
-#: field:product.template,framework_agreement_ids:0
+#: field:product.product,framework_agreement_ids:0
 msgid "Framework Agreements (LTA)"
 msgstr ""
 
@@ -116,13 +171,25 @@ msgstr ""
 
 #. module: framework_agreement
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Framework agreements (LTA)"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
+#: selection:framework.agreement,state:0
+msgid "Future"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
+#: view:framework.agreement.portfolio:framework_agreement.portfolio_search_view
+msgid "Group By"
 msgstr ""
 
 #. module: framework_agreement
 #: field:framework.agreement,id:0
 #: field:framework.agreement.line,id:0
+#: field:framework.agreement.portfolio,id:0
 #: field:framework.agreement.pricelist,id:0
 msgid "ID"
 msgstr ""
@@ -133,22 +200,24 @@ msgid "If checked you can have only one framework agreement per product at the s
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:213
-#, python-format
-msgid "If you change the pricelist of this order (and eventually the currency), prices of existing order lines will not be updated."
+#: field:framework.agreement,incoterm_id:0
+msgid "Incoterm"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:192
+#: field:framework.agreement,incoterm_address:0
+msgid "Incoterm Address"
+msgstr ""
+
+#. module: framework_agreement
+#: help:framework.agreement,incoterm_id:0
+msgid "International Commercial Terms are a series of predefined commercial terms used in international transactions."
+msgstr ""
+
+#. module: framework_agreement
+#: code:addons/framework_agreement/model/purchase.py:198
 #, python-format
 msgid "Invalid agreement Agreement and supplier does not match"
-msgstr ""
-
-#. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:187
-#: code:addons/framework_agreement/model/purchase.py:232
-#, python-format
-msgid "Invalid date Agreement and purchase date does not match"
 msgstr ""
 
 #. module: framework_agreement
@@ -157,8 +226,17 @@ msgid "Is draft"
 msgstr ""
 
 #. module: framework_agreement
+#: field:framework.agreement,__last_update:0
+#: field:framework.agreement.line,__last_update:0
+#: field:framework.agreement.portfolio,__last_update:0
+#: field:framework.agreement.pricelist,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: framework_agreement
 #: field:framework.agreement,write_uid:0
 #: field:framework.agreement.line,write_uid:0
+#: field:framework.agreement.portfolio,write_uid:0
 #: field:framework.agreement.pricelist,write_uid:0
 msgid "Last Updated by"
 msgstr ""
@@ -166,6 +244,7 @@ msgstr ""
 #. module: framework_agreement
 #: field:framework.agreement,write_date:0
 #: field:framework.agreement.line,write_date:0
+#: field:framework.agreement.portfolio,write_date:0
 #: field:framework.agreement.pricelist,write_date:0
 msgid "Last Updated on"
 msgstr ""
@@ -176,15 +255,20 @@ msgid "Lead time in days"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/framework_agreement.py:481
+#: code:addons/framework_agreement/model/framework_agreement.py:442
 #, python-format
 msgid "Many agreements found for the product with id %s at date %s"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/framework_agreement.py:507
+#: code:addons/framework_agreement/model/framework_agreement.py:466
 #, python-format
 msgid "Missing Agreement price list Please set a price list in currency %s for agreement %s"
+msgstr ""
+
+#. module: framework_agreement
+#: field:framework.agreement.portfolio,name:0
+msgid "Name"
 msgstr ""
 
 #. module: framework_agreement
@@ -193,9 +277,9 @@ msgid "Negociated price"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Negociated price lists"
 msgstr ""
 
@@ -205,7 +289,7 @@ msgid "Negociated quantity"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/framework_agreement.py:561
+#: code:addons/framework_agreement/model/framework_agreement.py:516
 #, python-format
 msgid "No pricelist foundPlease set a pricelist on PO or supplier %s"
 msgstr ""
@@ -221,9 +305,9 @@ msgid "One agreement per product"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Open Agreement"
 msgstr ""
 
@@ -233,25 +317,37 @@ msgid "Origin"
 msgstr ""
 
 #. module: framework_agreement
+#: field:framework.agreement,payment_term_id:0
+msgid "Payment Term"
+msgstr ""
+
+#. module: framework_agreement
+#: field:framework.agreement,portfolio_id:0
+#: field:purchase.order,portfolio_id:0
+#: field:purchase.order.line,portfolio_id:0
+msgid "Portfolio"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Price line"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: field:framework.agreement.pricelist,framework_agreement_line_ids:0
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Price lines"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.agreement_in_portfolio_form_view
 #: view:framework.agreement:framework_agreement.framework_agreement_form_view
 #: field:framework.agreement.line,framework_agreement_pricelist_id:0
 #: view:product.product:framework_agreement.agreement in product view
-#: view:product.template:framework_agreement.agreement in product template view
 msgid "Price list"
 msgstr ""
 
@@ -266,20 +362,10 @@ msgid "Pricelist"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
 #: field:framework.agreement,product_id:0
 #: model:ir.model,name:framework_agreement.model_product_product
 msgid "Product"
-msgstr ""
-
-#. module: framework_agreement
-#: model:ir.model,name:framework_agreement.model_product_template
-msgid "Product Template"
-msgstr ""
-
-#. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:148
-#, python-format
-msgid "Product not in agreement"
 msgstr ""
 
 #. module: framework_agreement
@@ -293,8 +379,8 @@ msgid "Purchase Order Line"
 msgstr ""
 
 #. module: framework_agreement
-#: field:framework.agreement,purchase_order_ids:0
-msgid "Purchase order ids"
+#: field:framework.agreement,purchase_line_ids:0
+msgid "Purchase line ids"
 msgstr ""
 
 #. module: framework_agreement
@@ -303,56 +389,71 @@ msgid "Quantity"
 msgstr ""
 
 #. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
+#: selection:framework.agreement,state:0
+msgid "Running"
+msgstr ""
+
+#. module: framework_agreement
+#: field:framework.agreement,shipment_origin_id:0
+msgid "Shipment Origin"
+msgstr ""
+
+#. module: framework_agreement
 #: sql_constraint:framework.agreement:0
 msgid "Start/end date inversion"
 msgstr ""
 
 #. module: framework_agreement
+#: field:framework.agreement,state:0
+msgid "State"
+msgstr ""
+
+#. module: framework_agreement
+#: view:framework.agreement:framework_agreement.framework_agreement_search_view
 #: field:framework.agreement,supplier_id:0
+#: view:framework.agreement.portfolio:framework_agreement.portfolio_search_view
+#: field:framework.agreement.portfolio,supplier_id:0
 msgid "Supplier"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/framework_agreement.py:367
-#, python-format
-msgid "There allready is a running agreement for product %s"
+#: sql_constraint:framework.agreement.portfolio:0
+msgid "There can be only one portfolio per supplier and company."
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/framework_agreement.py:377
+#: code:addons/framework_agreement/model/framework_agreement.py:355
 #, python-format
-msgid "There can not be multiple agreement for supplier %s"
+msgid "There can only be one agreement for a given supplier, incoterm, incoterm address and product"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:245
+#: code:addons/framework_agreement/model/framework_agreement.py:349
 #, python-format
-msgid "You can not change supplierPO is linked to an agreement"
+msgid "There is already is a running agreement for product %s"
 msgstr ""
 
 #. module: framework_agreement
-#: code:addons/framework_agreement/model/purchase.py:79
+#: code:addons/framework_agreement/model/purchase.py:80
+#, python-format
+msgid "You cannot change the supplier: the PO is linked to an agreement portfolio."
+msgstr ""
+
+#. module: framework_agreement
+#: code:addons/framework_agreement/model/purchase.py:168
 #, python-format
 msgid "You have set the price to %s \n"
 " but there is a running agreement with price %s"
 msgstr ""
 
 #. module: framework_agreement
-#: view:purchase.order.line:framework_agreement.add_onchange_on_pruchase_order_line_form_standalone
-msgid "on_change=\"onchange_price(price_unit, parent.framework_agreement_id, product_qty, parent.pricelist_id)"
+#: view:purchase.order:framework_agreement.add_onchange_on_pruchase_order_form
+msgid "{'agreement_id': framework_agreement_id, 'incoterm_id': parent.incoterm_id, 'currency_id': parent.currency_id, 'portfolio_id': parent.portfolio_id}"
 msgstr ""
 
 #. module: framework_agreement
 #: view:purchase.order:framework_agreement.add_onchange_on_pruchase_order_form
-msgid "onchange_partner_id(partner_id, framework_agreement_id)"
+msgid "{'portfolio_id': portfolio_id}"
 msgstr ""
 
-#. module: framework_agreement
-#: view:purchase.order:framework_agreement.add_onchange_on_pruchase_order_form
-msgid "onchange_pricelist(pricelist_id, order_line)"
-msgstr ""
-
-#. module: framework_agreement
-#: view:purchase.order:framework_agreement.add_onchange_on_pruchase_order_form
-msgid "onchange_product_id(parent.pricelist_id,product_id,product_qty,product_uom,parent.partner_id, parent.date_order,parent.fiscal_position,date_planned,name,price_unit,parent.state,parent.framework_agreement_id,context)"
-msgstr ""

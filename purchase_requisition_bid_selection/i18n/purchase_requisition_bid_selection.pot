@@ -6,14 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-24 12:17+0000\n"
-"PO-Revision-Date: 2015-03-24 12:17+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: purchase_requisition_bid_selection
+#: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
+msgid "(extend)"
+msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: help:purchase.requisition,bid_receipt_mode:0
@@ -29,14 +32,44 @@ msgid "- Restricted : you select yourself the bidders and generate a RFQ for eac
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "/ Received on:"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
 msgid "Accept selection"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Approved by"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: view:purchase.action_modal:purchase_requisition_bid_selection.modal_confirm_close_selection
 msgid "Are you sure you want to accept the current selection?\n"
 "            You cannot cancel this action."
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
+msgid "Back to Confirmed"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
+msgid "Back to Selected"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Bid"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Bid Date"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -52,13 +85,28 @@ msgid "Bid eligible"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: field:purchase.order,bid_partial:0
-msgid "Bid partially selected"
+#: field:purchase.requisition,bid_ids:0
+msgid "Bid ids"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:update.bid.internal.remark,bid_internal_remark:0
 msgid "Bid internal remark"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Bid number"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: field:purchase.order,bid_partial:0
+msgid "Bid partially selected"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Bid validity date"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -74,6 +122,11 @@ msgstr ""
 #. module: purchase_requisition_bid_selection
 #: field:purchase.requisition,budget:0
 msgid "Budget"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Budget availability ("
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -100,15 +153,27 @@ msgstr ""
 #: view:purchase.action_modal:purchase_requisition_bid_selection.action_modal_confirm_different_quantity
 #: view:purchase.action_modal:purchase_requisition_bid_selection.modal_confirm_close_selection
 #: view:purchase.action_modal.ask_selection_reasons:purchase_requisition_bid_selection.ask_selection_reasons
+#: view:purchase.action_modal.ask_validity:purchase_requisition_bid_selection.ask_validity
 #: view:purchase.requisition.partner:purchase_requisition_bid_selection.view_purchase_requisition_partner_draftbid
 #: view:update.bid.internal.remark:purchase_requisition_bid_selection.view_update_bid_internal_remark
+#: view:update.remark:purchase_requisition_bid_selection.view_update_remark
 msgid "Cancel"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:220
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Canceled bids"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:234
 #, python-format
 msgid "Canceled by the call for bids associated to this request for quotation."
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:purchase.action_modal.ask_validity:purchase_requisition_bid_selection.ask_validity
+msgid "Change validity"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -118,9 +183,20 @@ msgid "Choose Supplier"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: model:ir.actions.report.xml,name:purchase_requisition_bid_selection.action_report_purchase_requisitions
+msgid "Comparative Bid Analysis"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Comparative Bid analysis"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.action_modal:purchase_requisition_bid_selection.action_modal_confirm_different_quantity
 #: view:purchase.action_modal:purchase_requisition_bid_selection.modal_confirm_close_selection
 #: view:purchase.action_modal.ask_selection_reasons:purchase_requisition_bid_selection.ask_selection_reasons
+#: view:purchase.action_modal.ask_validity:purchase_requisition_bid_selection.ask_validity
 msgid "Confirm"
 msgstr ""
 
@@ -131,6 +207,8 @@ msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:purchase.order,country_of_origin:0
+#: field:purchase.order.line,country_of_origin:0
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
 msgid "Country of origin"
 msgstr ""
 
@@ -141,14 +219,23 @@ msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:purchase.action_modal.ask_selection_reasons,create_uid:0
+#: field:purchase.action_modal.ask_validity,create_uid:0
 #: field:update.bid.internal.remark,create_uid:0
+#: field:update.remark,create_uid:0
 msgid "Created by"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:purchase.action_modal.ask_selection_reasons,create_date:0
+#: field:purchase.action_modal.ask_validity,create_date:0
 #: field:update.bid.internal.remark,create_date:0
+#: field:update.remark,create_date:0
 msgid "Created on"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Currency of bid"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -175,8 +262,31 @@ msgid "Delivery Remarks"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Delivery promised (Incoterms + destination)"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Description of item"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: field:purchase.action_modal.ask_selection_reasons,display_name:0
+#: field:purchase.action_modal.ask_validity,display_name:0
+#: field:update.bid.internal.remark,display_name:0
+#: field:update.remark,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.order.line:purchase_requisition_bid_selection.view_purchase_order_line_search
 msgid "Eligible"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: field:purchase.requisition,eligible_bid_ids:0
+msgid "Eligible bid ids"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -185,22 +295,31 @@ msgid "Encode a Bid"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:246
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:269
+#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:260
 #, python-format
 msgid "Error"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:130
+#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:144
 #, python-format
 msgid "Error!"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Estimated arrival date"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: view:purchase.action_modal:purchase_requisition_bid_selection.action_modal_confirm_different_quantity
 msgid "For some lines, the selected quantity does not match the requested quantity.\n"
 "            Please confirm the operation."
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "GRAND TOTAL"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -215,7 +334,9 @@ msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:purchase.action_modal.ask_selection_reasons,id:0
+#: field:purchase.action_modal.ask_validity,id:0
 #: field:update.bid.internal.remark,id:0
+#: field:update.remark,id:0
 msgid "ID"
 msgstr ""
 
@@ -226,8 +347,39 @@ msgid "Incoterm"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Incoterm (2010)"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: help:purchase.requisition,req_incoterm_address:0
 msgid "Incoterm Place of Delivery. International Commercial Terms are a series of predefined commercial terms used in international transactions."
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: help:purchase.order.line,incoterm_address:0
+msgid "Incoterms Place of Delivery. International Commercial Terms are a series of predefined commercial terms used in international transactions."
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: field:purchase.order.line,incoterm_address:0
+msgid "Incoterms place"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Informations"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Internal remark"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: field:purchase.order,bid_internal_remark:0
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Internal remarks"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -236,14 +388,26 @@ msgid "International Commercial Terms are a series of predefined commercial term
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: field:purchase.action_modal.ask_selection_reasons,__last_update:0
+#: field:purchase.action_modal.ask_validity,__last_update:0
+#: field:update.bid.internal.remark,__last_update:0
+#: field:update.remark,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: field:purchase.action_modal.ask_selection_reasons,write_uid:0
+#: field:purchase.action_modal.ask_validity,write_uid:0
 #: field:update.bid.internal.remark,write_uid:0
+#: field:update.remark,write_uid:0
 msgid "Last Updated by"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:purchase.action_modal.ask_selection_reasons,write_date:0
+#: field:purchase.action_modal.ask_validity,write_date:0
 #: field:update.bid.internal.remark,write_date:0
+#: field:update.remark,write_date:0
 msgid "Last Updated on"
 msgstr ""
 
@@ -253,9 +417,34 @@ msgid "Meets Specifications"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Meets required specifications"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: field:purchase.order,meets_specifications:0
 #: field:purchase.order.line,meets_specifications:0
 msgid "Meets specifications"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "N/A"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: field:purchase.action_modal.ask_validity,validity:0
+msgid "New end of validity"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Non eligible bids"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Number of Suppliers invited"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -271,23 +460,33 @@ msgid "Options"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: field:purchase.order.line,payment_term_id:0
+msgid "Payment Term"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Paymet terms"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.action_modal.ask_selection_reasons:purchase_requisition_bid_selection.ask_selection_reasons
 msgid "Please enter a reason for the suggested selection."
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:purchase.action_modal.ask_validity:purchase_requisition_bid_selection.ask_validity
+msgid "Please enter validity date"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Prepared and submited by"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: field:purchase.order,keep_in_draft:0
 msgid "Prevent validation of purchase order."
-msgstr ""
-
-#. module: purchase_requisition_bid_selection
-#: field:purchase.requisition,pricelist_id:0
-msgid "Pricelist"
-msgstr ""
-
-#. module: purchase_requisition_bid_selection
-#: help:purchase.requisition,pricelist_id:0
-msgid "Pricelist that represent the currency for current logistic request."
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -316,12 +515,39 @@ msgid "Purchase Requisition Partner"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
-msgid "Re-Open Bids Selection"
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Quantity"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Quotation Request (QR) No"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Quotations reference and date"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Rate of exchange"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Reason"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Recommended Supplier(s)"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: view:update.bid.internal.remark:purchase_requisition_bid_selection.view_update_bid_internal_remark
+#: view:update.remark:purchase_requisition_bid_selection.view_update_remark
+#: field:update.remark,remark:0
 msgid "Remark"
 msgstr ""
 
@@ -330,6 +556,11 @@ msgstr ""
 #: field:purchase.order.line,remark:0
 #: field:purchase.requisition.line,remark:0
 msgid "Remarks / Conditions"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Report date"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -385,6 +616,11 @@ msgid "Sealed"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Selected"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.action_modal.ask_selection_reasons:purchase_requisition_bid_selection.ask_selection_reasons
 #: field:purchase.action_modal.ask_selection_reasons,selection_reasons:0
 #: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
@@ -393,13 +629,38 @@ msgid "Selection reasons"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: field:purchase.order,bid_internal_remark:0
-msgid "Internal remarks"
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Sub-total services"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Supplier name"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Supplier reference"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "TOTAL"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: help:purchase.order,keep_in_draft:0
 msgid "Technical field used to prevent the PO that is automatically generated from a Tender to be validated. It is checked on the workflow transition."
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Tender closing date/time"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Tendering output ("
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -420,7 +681,21 @@ msgstr ""
 
 #. module: purchase_requisition_bid_selection
 #: field:purchase.order,terms_of_payment:0
+#: field:purchase.order.line,terms_of_payment:0
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
 msgid "Terms of payment"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "This tender has no eligible bids\n"
+"\n"
+"              To be valid, a bid must have Eligible bid checked and be in state \"Draft Bid\" or \"Bid encoded\""
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Total"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -429,13 +704,18 @@ msgid "True if the bid has been partially selected"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: model:ir.actions.act_window,name:purchase_requisition_bid_selection.action_update_bid_internal_remark
-msgid "Update bid internal remark"
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Unit Price"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: view:update.bid.internal.remark:purchase_requisition_bid_selection.view_update_bid_internal_remark
-msgid "Update remark"
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Unit price"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: model:ir.actions.act_window,name:purchase_requisition_bid_selection.action_update_bid_internal_remark
+msgid "Update bid internal remark"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -444,8 +724,27 @@ msgid "Update internal remark"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: model:ir.actions.act_window,name:purchase_requisition_bid_selection.action_update_remark
+#: view:purchase.order.line:purchase_requisition_bid_selection.view_purchase_order_line_tree
+#: view:update.bid.internal.remark:purchase_requisition_bid_selection.view_update_bid_internal_remark
+#: view:update.remark:purchase_requisition_bid_selection.view_update_remark
+msgid "Update remark"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:321
+#, python-format
+msgid "Validity extended from %s to %s"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
 msgid "View Generated PO"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Volume estimated"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
@@ -459,24 +758,28 @@ msgid "Warning"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Weight estimated"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: field:purchase.order,weight_estimated:0
 msgid "Weight estimated (kg)"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:270
-#, python-format
-msgid "You cannot cancel a call for bids which has already received bids."
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "Yes"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:246
+#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:260
 #, python-format
 msgid "You do not have valid sent RFQs."
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
-#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:131
+#: code:addons/purchase_requisition_bid_selection/model/purchase_requisition.py:145
 #, python-format
 msgid "You have to define some products before confirming the call for bids."
 msgstr ""
@@ -497,11 +800,18 @@ msgid "gtk-apply"
 msgstr ""
 
 #. module: purchase_requisition_bid_selection
+#: view:website:purchase_requisition_bid_selection.report_purchaserequisitions_document
+msgid "of bid"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
 #: view:purchase.action_modal:purchase_requisition_bid_selection.action_modal_confirm_different_quantity
 #: view:purchase.action_modal:purchase_requisition_bid_selection.modal_confirm_close_selection
 #: view:purchase.action_modal.ask_selection_reasons:purchase_requisition_bid_selection.ask_selection_reasons
+#: view:purchase.action_modal.ask_validity:purchase_requisition_bid_selection.ask_validity
 #: view:purchase.requisition.partner:purchase_requisition_bid_selection.view_purchase_requisition_partner_draftbid
 #: view:update.bid.internal.remark:purchase_requisition_bid_selection.view_update_bid_internal_remark
+#: view:update.remark:purchase_requisition_bid_selection.view_update_remark
 msgid "or"
 msgstr ""
 
@@ -523,5 +833,10 @@ msgstr ""
 #. module: purchase_requisition_bid_selection
 #: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
 msgid "{'invisible': ['|',('purchase_ids','=',[]),('state', 'in', ('draft'))]}"
+msgstr ""
+
+#. module: purchase_requisition_bid_selection
+#: view:purchase.requisition:purchase_requisition_bid_selection.view_purchase_requisition_form
+msgid "{'readonly': [('state','not in',('draft'))]}"
 msgstr ""
 
